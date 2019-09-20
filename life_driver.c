@@ -15,7 +15,7 @@
  * Name: Austin Rath
  * email address: arath36@gmail.com
  * UTEID: ar63736
- * Section 5 digit ID: 
+ * Section 5 digit ID: 16020
  *
  */
 
@@ -34,19 +34,10 @@
 
 int main(int argc, char *argv[]) {
 
-/* 
-     printf("%d arguments\n", argc);
-
-   for (int i = 0; i < argc; i++)
-      printf("%s\n", argv[i]);
-
-   return 0;
-*/
-
    //edit these two lines and use the command line arguments
 
-   char *fName = (char*) malloc(strlen(argv[1]));
-   fName = strcpy(fName, argv[1]);
+   char *fName = (char*) malloc(strlen(argv[1]) + 1);
+   strcpy(fName, argv[1]);
    const int numGenerations  = atoi(argv[2]); //set to a smaller number for debugging
 
    const int MAX_ROWS = 80; //we want the world to fit on one screen

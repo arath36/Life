@@ -32,7 +32,7 @@ void populateWorld(char fname[], char *grid[], int *numRows, int *numCols) {
 
 
         while (fgets(buf, sizeof(buf), fptr)) {
-            int length = strlen(buf);
+            int length = strlen(buf) + 1;
             //printf("%d", length);
             char *newlineptr = (char *) malloc(length);
             colCount = length;
@@ -47,6 +47,7 @@ void populateWorld(char fname[], char *grid[], int *numRows, int *numCols) {
           *numCols = colCount;
             
         }
+        fclose(fptr);
         int returnCheck = numberOfNeighbors(grid,5,11,7,14);
 
 
